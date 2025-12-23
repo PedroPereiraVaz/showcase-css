@@ -261,7 +261,7 @@
   .hero-container {
     width: 90%;
     flex-direction: column; /* Apilar columna */
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 0.5rem 0 0 0;
   }
   .display-title {
@@ -269,7 +269,7 @@
   }
   .hero-desc {
     font-size: 0.8rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.8rem;
   }
   .hero-visual {
     height: 180px;
