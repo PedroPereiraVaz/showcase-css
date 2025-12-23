@@ -74,20 +74,13 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--bg-color); /* Fondo sólido al hacer scroll */
-  border-bottom: var(--border-width) solid var(--border-color);
-  padding: 0 5%;
-  height: var(--nav-height);
-}
-
-.header-container {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--bg-color); /* Fondo sólido al hacer scroll */
+  border-bottom: var(--border-width) solid var(--border-color);
+  padding: 0 max(7%, (100% - 1400px) / 2);
+  height: var(--nav-height);
 }
 
 .logo-box {
@@ -153,14 +146,19 @@ a {
 
 /* 4. HERO SECTION */
 .hero-section {
+  /* REQUISITO: Altura exacta (Viewport - Header) */
+  height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
   justify-content: space-between; /* Contenido arriba/centro, Marquee abajo */
+  border-bottom: var(--border-width) solid var(--border-color);
+  position: relative;
   overflow: hidden; /* Evitar scrollbars indeseados */
-  padding: 0; /* Hero usa layout especial */
 }
 
 .hero-container {
   width: 90%;
-  max-width: 1280px; /* Ancho máximo contenido */
+  max-width: 1400px; /* Ancho máximo contenido */
   margin: 0 auto;
   flex-grow: 1; /* Ocupa el espacio disponible sobre el marquee */
   display: flex; /* Flex para centrar verticalmente el grid interno si fuera necesario, o mantener grid */
@@ -194,7 +192,7 @@ a {
 
 .display-title {
   font-family: var(--font-display);
-  font-size: 4.5rem;
+  font-size: 5.5rem; /* Título gigante */
   line-height: 0.9;
   font-weight: 800;
   margin-bottom: 2rem;
@@ -398,9 +396,14 @@ a {
 
 /* 6. PROJECTS SECTION */
 .projects-section {
+  padding: 1rem 5%; /* Reducido de 6rem */
   background: #fff;
-  justify-content: start;
-  padding-top: 3rem;
+  /* REQUISITO: Ocupar todo el espacio disponible */
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: start; /* REMOVE CENTER: Para quitar espacio superior */
+  padding-top: 3rem; /* Espacio controlado arriba */
 }
 
 .section-header {
@@ -421,7 +424,7 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 0; /* Gap manejado por márgenes para overlaps */
-  max-width: 1280px; /* Ancho final sustancial */
+  max-width: 1200px; /* Ancho final sustancial */
   margin: 0 auto;
   padding: 0; /* Reducido de 4rem */
   position: relative;
@@ -593,14 +596,22 @@ a {
 
 /* 7. ABOUT SECTION (CLIP-PATH & FILTER) */
 .about-section {
+  padding: 6rem 5%;
+  border-top: var(--border-width) solid var(--border-color);
   background: var(--bg-color);
+
+  /* REQUISITO: Ocupar todo el espacio disponible */
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center;
 }
 
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 4rem;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   align-items: center;
 }
@@ -840,26 +851,27 @@ a {
   color: var(--accent-orange);
 }
 
-/* SHARED SECTION & FOOTER STYLES */
-section,
-.main-footer {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  min-height: calc(100vh - var(--nav-height));
+/* SCROLL FIX */
+section {
   scroll-margin-top: var(--nav-height);
-  padding: 6rem 5%; /* Adjusted to match base header padding */
-  justify-content: center;
-  align-items: center;
 }
 
-section {
-  border-bottom: var(--border-width) solid var(--border-color);
+#about {
+  scroll-margin-top: var(--nav-height);
 }
 
 /* 8. SKILLS / STACK SECTION */
 .skills-visual-section {
   background: var(--text-primary);
+  padding: 6rem 0;
+
+  /* REQUISITO: Ocupar todo el espacio disponible */
+  min-height: calc(100vh - var(--nav-height));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   overflow: hidden; /* Contener decoraciones */
 
   /* Patrón de fondo sutil */
@@ -946,4 +958,160 @@ section {
   /* FORZAR 5 COLUMNAS MÁX: 120px*5 + 24px*4 = 696px. Dejamos 750px de margen */
   max-width: 750px;
   z-index: 10;
+}
+
+/* RESPONSIVE: Forzar 3 columnas en pantallas medianas/pequeñas */
+/* 3 COLUMNAS: 120px*3 + 24px*2 = 408px + márgenes */
+@media (max-width: 768px) {
+  .stack-grid {
+    max-width: 460px;
+  }
+  .skills-bg-text {
+    font-size: 40vw; /* Más grande en móvil para verse algo */
+  }
+}
+
+.stack-card {
+  background: #fff;
+  border: var(--border-width) solid #fff;
+  /* REQUISITO: Cuadrados perfectos fijos */
+  width: 120px;
+  height: 120px;
+  padding: 0.5rem;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 6px 6px 0 0 var(--accent-pink);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: default;
+}
+
+.stack-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 0 var(--accent-blue);
+  border-color: var(--accent-yellow);
+}
+
+.stack-icon {
+  font-size: 2.2rem; /* Tamaño reducido para dejar espacio al texto */
+  margin-bottom: 0.2rem;
+  color: var(--text-primary);
+  transition: 0.3s;
+}
+
+.stack-card:hover .stack-icon {
+  transform: scale(1.1) rotate(5deg);
+  color: var(--accent-blue);
+}
+
+.stack-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  /* REQUISITO: Texto adaptable */
+  font-size: 0.8rem; /* Fuente base pequeña */
+  color: var(--text-primary);
+
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Cortar si es excesivamente largo, aunque 0.8rem debería caber */
+}
+
+/* 9. FOOTER */
+.main-footer {
+  background: white;
+  padding: 2rem 5%;
+  border-top: var(--border-width) solid var(--border-color);
+  /* REQUISITO: Ocupar todo el espacio disponible (Viewport - Header) */
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor crece para ocupar el alto */
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* CTA arriba/centro, Socials abajo */
+}
+
+.footer-cta {
+  flex-grow: 1; /* Ocupa el espacio central */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* .footer-cta duplicado eliminado */
+
+/* .footer-cta duplicado eliminado */
+.footer-cta h2 {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.email-link {
+  font-size: 2.5rem; /* Un poco más pequeño para que no rompa tanto */
+  font-weight: 900;
+  text-decoration: none; /* Quitamos subrayado por defecto */
+  color: var(--text-primary);
+  background: var(--accent-yellow);
+  padding: 1rem 3rem;
+  border: 3px solid var(--border-color);
+  box-shadow: 8px 8px 0 0 var(--border-color);
+  transition: 0.2s;
+  display: inline-block;
+  transform: rotate(-2deg); /* Toque "no-code" / dinámico */
+}
+
+.email-link:hover {
+  transform: rotate(0deg) translate(-4px, -4px);
+  box-shadow: 12px 12px 0 0 var(--accent-pink);
+  background: #fff;
+  color: var(--text-primary);
+}
+
+.footer-bottom {
+  margin-top: 4rem;
+  border-top: 2px solid #eee;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column; /* Apilamos verticalmente */
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.socials a {
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+  color: var(--text-primary);
+}
+
+.socials a:hover {
+  border-bottom-color: var(--accent-blue);
+  color: var(--accent-blue);
 }
