@@ -1,0 +1,62 @@
+/* 1. CONFIGURACIÓN Y VARIABLES */
+:root {
+  /* Paleta de Colores */
+  --bg-color: #fffbf0;
+  --text-primary: #151515;
+  --border-color: #151515;
+
+  /* Acentos */
+  --accent-yellow: #ffeb3b;
+  --accent-pink: #ff9ff3;
+  --accent-blue: #00d2d3;
+  --accent-orange: #ff9f43;
+
+  /* Tipografía */
+  --font-display: "Syne", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+
+  /* Sistema de Espaciado y Bordes */
+  --border-width: 3px;
+  --shadow-hard: 6px 6px 0px 0px var(--border-color);
+  --shadow-hover: 10px 10px 0px 0px var(--border-color);
+  --radius-small: 8px;
+
+  --nav-height: 120px;
+}
+
+/* 2. RESET Y BASES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Selección personalizada */
+::selection {
+  background-color: var(--text-primary);
+  color: var(--accent-yellow);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}

@@ -1,0 +1,250 @@
+/* HERO SECTION */
+.hero-section {
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: var(--border-width) solid var(--border-color);
+  position: relative;
+}
+
+.hero-container {
+  width: 80%;
+  max-width: 1280px;
+  margin: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  height: auto;
+}
+
+/* Bloque: Descripcion */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.greeting {
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  display: inline-block;
+  background: var(--accent-yellow);
+  padding: 0.2rem 1rem;
+  border: 2px solid var(--border-color);
+  width: fit-content;
+  transform: rotate(-2deg);
+}
+
+.display-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 8vw, 3.5rem);
+  line-height: 0.9;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.highlight-yellow {
+  color: var(--accent-yellow);
+  text-shadow: 4px 4px 0 var(--border-color);
+  -webkit-text-stroke: 2px var(--border-color);
+}
+
+.hero-desc {
+  font-size: 1.25rem;
+  max-width: 100%;
+  margin-bottom: 3rem;
+  color: #444;
+}
+
+.highlight-pink {
+  background: linear-gradient(transparent 60%, var(--accent-pink) 60%);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero-btn {
+  background: var(--accent-blue);
+  color: var(--text-primary);
+  padding: 1rem 2rem;
+  font-weight: 700;
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-hard);
+  transition: 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-btn:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-hover);
+  background: #fff;
+}
+
+.link-btn {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* Bloque: Ventana de codigo */
+.hero-visual {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  max-width: 500px;
+  min-width: 320px;
+  border-left: var(--border-width) solid var(--border-color);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.code-window {
+  width: 100%;
+  max-width: 350px;
+  background: #1a1a1a; /* Fondo oscuro terminal */
+  border: 3px solid var(--border-color);
+  box-shadow: 12px 12px 0 0 var(--accent-pink);
+  border-radius: var(--radius-small);
+  overflow: hidden;
+  transform: rotate(-3deg);
+  transition: 0.3s;
+  position: relative;
+  z-index: 5;
+}
+
+.code-window:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 16px 16px 0 0 var(--accent-blue);
+}
+
+.window-header {
+  background: #333;
+  padding: 0.8rem 1rem;
+  border-bottom: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.red {
+  background: #ff5f56;
+}
+.yellow {
+  background: #ffbd2e;
+}
+.green {
+  background: #27c93f;
+}
+
+.window-title {
+  color: #aaa;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.code-content {
+  padding: 2rem;
+  font-family: monospace;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.line {
+  display: block;
+}
+
+.indent {
+  padding-left: 2rem;
+}
+
+/* Syntax Highlighting */
+.keyword {
+  color: var(--accent-pink);
+  font-weight: bold;
+}
+.prop {
+  color: var(--accent-blue);
+}
+.val {
+  color: var(--accent-yellow);
+}
+
+/* Animación de Cursor parpadeante */
+.line:last-child::after {
+  content: "_";
+  animation: blink 1s infinite;
+  color: var(--accent-yellow);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 5. CINTA DE SKILLS */
+.cinta-tecnologias {
+  background: var(--text-primary);
+  color: #fff;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cinta-carril {
+  display: inline-block;
+  animation: mover-cinta 60s linear infinite;
+}
+
+.cinta-carril span {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  margin-right: 4rem;
+}
+
+@keyframes mover-cinta {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
