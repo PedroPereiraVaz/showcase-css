@@ -265,8 +265,11 @@
   .hero-visual {
     height: auto;
   }
-  .hero-desc {
-    font-size: 1rem;
+  .display-title {
     margin-bottom: 1rem;
+  }
+  .hero-desc {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
   }
 }
