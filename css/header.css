@@ -14,16 +14,36 @@
   gap: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .header-nav {
-    flex-direction: column;
-    height: auto;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.5rem 3%;
   }
 
-  .nav-list {
-    flex-wrap: wrap;
+  .logo-box {
+    width: 100%; /* Forzar salto de línea para estar en la fila 1 */
+    text-align: center;
+    display: flex;
     justify-content: center;
-    gap: 1rem;
+    margin-bottom: 0.2rem;
+    border: none; /* Simplificamos visualmente en móvil */
+    box-shadow: none;
+    background: transparent;
+  }
+
+  /* Ajustes para navegar y contactar en la fila 2 */
+  .nav-list {
+    gap: 0.8rem; /* Reducir espacio entre items */
+  }
+
+  .nav-link {
+    font-size: 0.85rem; /* Letra un poco más pequeña */
+  }
+
+  .cta-nav {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -53,7 +73,7 @@
 .nav-link {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 3vw, 1rem);
   position: relative;
   padding: 0.2rem 0;
 }
