@@ -248,3 +248,21 @@
     transform: translateX(-50%);
   }
 }
+
+/* RESPONSIVE HERO */
+@media (max-width: 1000px) {
+  .hero-section {
+    min-height: auto; /* Dejar que crezca según contenido */
+    padding-bottom: 0;
+  }
+
+  .hero-container {
+    width: 90%;
+    flex-direction: column; /* Apilar columna */
+    gap: 1rem;
+    padding: 1rem 0 1rem 0;
+  }
+  .hero-visual {
+    height: auto;
+  }
+}
