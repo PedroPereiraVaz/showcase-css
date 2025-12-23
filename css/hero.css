@@ -262,14 +262,37 @@
     gap: 1rem;
     padding: 0.5rem 0 0 0;
   }
-  .hero-visual {
-    height: auto;
-  }
   .display-title {
     margin-bottom: 1rem;
   }
   .hero-desc {
     font-size: 0.8rem;
     margin-bottom: 0.2rem;
+  }
+  .hero-visual {
+    height: 180px;
+  }
+
+  /* Ajustar la ventana interior para que quepa en 250px */
+  .code-window {
+    transform: scale(0.7) rotate(-3deg);
+    max-width: 100%;
+    margin-top: -1rem; /* Subir un poco para compensar el scaling */
+  }
+  .code-window:hover {
+    transform: rotate(0deg) scale(0.8);
+  }
+
+  /* Reducir texto interno para móviles */
+  .code-content {
+    padding: 1rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  .cinta-tecnologias {
+    padding: 0.4rem;
+  }
+  .cinta-carril span {
+    font-size: 0.8rem;
   }
 }
