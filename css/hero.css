@@ -252,7 +252,7 @@
 /* RESPONSIVE HERO */
 @media (max-width: 1000px) {
   .hero-section {
-    min-height: auto; /* Dejar que crezca según contenido */
+    min-height: calc(100vh - var(--nav-height));
     padding-bottom: 0;
   }
 
