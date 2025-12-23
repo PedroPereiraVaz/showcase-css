@@ -252,7 +252,9 @@
 /* RESPONSIVE HERO */
 @media (max-width: 1000px) {
   .hero-section {
-    min-height: calc(100vh - var(--nav-height));
+    min-height: calc(
+      100dvh - 150px
+    ); /* Ajuste estático para header de 2 filas y barra móvil */
     padding-bottom: 0;
   }
 
