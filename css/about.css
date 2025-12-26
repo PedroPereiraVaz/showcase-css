@@ -304,23 +304,23 @@ section {
   }
 
   .about-text h3 {
-    font-size: 1.8rem; /* Reducir título drásticamente (antes 3rem) */
-    margin-bottom: 0.8rem;
+    font-size: 1.6rem; /* Reducir título drásticamente (antes 3rem) */
+    margin-bottom: 0.6rem;
   }
 
   .about-text p {
     font-size: 0.9rem; /* Texto cuerpo más pequeño */
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   .stats-list {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     gap: 1.5rem;
     justify-content: center;
   }
 
   .stats-list li strong {
-    font-size: 1.8rem; /* Números más pequeños */
+    font-size: 1.6rem; /* Números más pequeños */
   }
 
   .stats-list li span {
