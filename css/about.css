@@ -271,7 +271,6 @@ section {
 @media (max-width: 1000px) {
   .about-section {
     padding: 2rem 3%; /* Mucho menos padding vertical */
-    min-height: auto; /* Altura natural */
   }
 
   .about-grid {
