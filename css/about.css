@@ -269,3 +269,61 @@ section {
 #about {
   scroll-margin-top: var(--nav-height);
 }
+
+/* RESPONSIVE ABOUT */
+@media (max-width: 1000px) {
+  .about-section {
+    padding: 2rem 3%; /* Mucho menos padding vertical */
+    min-height: auto; /* Altura natural */
+  }
+
+  .about-grid {
+    flex-direction: column; /* Apilar verticalmente */
+    gap: 1rem; /* Menos espacio entre visual y texto */
+  }
+
+  /* 1. Reducir animación/visual con scale */
+  .inspector-panel {
+    transform: scale(0.75); /* Reducir al 75% */
+    transform-origin: center center;
+    margin-bottom: -40px; /* Compensar espacio vacío visual por el scale */
+    margin-top: -20px;
+    width: 100%;
+    border-width: 2px; /* Bordes más finos */
+    box-shadow: 6px 6px 0 0 var(--border-color); /* Sombra ajustada */
+  }
+
+  .inspector-panel:hover {
+    /* Reset hover transform para que no "salte" */
+    transform: scale(0.75) rotate(1deg);
+  }
+
+  .about-text {
+    text-align: center; /* Centrar texto */
+    padding: 0 1rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.8rem; /* Reducir título drásticamente (antes 3rem) */
+    margin-bottom: 0.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem; /* Texto cuerpo más pequeño */
+    line-height: 1.4;
+  }
+
+  .stats-list {
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .stats-list li strong {
+    font-size: 1.8rem; /* Números más pequeños */
+  }
+
+  .stats-list li span {
+    font-size: 0.8rem;
+  }
+}
