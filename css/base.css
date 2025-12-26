@@ -22,6 +22,23 @@
   --radius-small: 8px;
 
   --nav-height: 120px;
+  --nav-height-mobile: 130px; /* Altura estimada header móvil (2 filas) */
+}
+
+/* UTILIDAD: Sección Ocupar Pantalla Completa (menos Header) */
+.full-screen {
+  /* Desktop default */
+  min-height: calc(100vh - var(--nav-height));
+
+  /* Modern logical viewport (fix mobile jump) */
+  min-height: calc(100svh - var(--nav-height));
+}
+
+@media (max-width: 1000px) {
+  .full-screen {
+    /* Ajuste para móvil usando svh y la altura del header móvil */
+    min-height: calc(100svh - var(--nav-height-mobile));
+  }
 }
 
 /* 2. RESET Y BASES */

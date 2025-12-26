@@ -2,10 +2,6 @@
 .skills-visual-section {
   background: var(--text-primary);
   padding: 6rem 0;
-
-  /* REQUISITO: Ocupar todo el espacio disponible */
-  min-height: calc(100vh - var(--nav-height));
-
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,6 +1,5 @@
 /* HERO SECTION */
 .hero-section {
-  min-height: calc(100vh - var(--nav-height));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -252,9 +251,6 @@
 /* RESPONSIVE HERO */
 @media (max-width: 1000px) {
   .hero-section {
-    min-height: calc(
-      100dvh - 130px
-    ); /* Ajuste estático para header de 2 filas y barra móvil */
     padding-bottom: 0;
   }
 

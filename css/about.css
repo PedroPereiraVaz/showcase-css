@@ -3,9 +3,6 @@
   padding: 6rem 5%;
   border-top: var(--border-width) solid var(--border-color);
   background: var(--bg-color);
-
-  /* REQUISITO: Ocupar todo el espacio disponible */
-  min-height: calc(100vh - var(--nav-height));
   display: flex;
   align-items: center; /* Centrar verticalmente */
   justify-content: center;

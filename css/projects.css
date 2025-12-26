@@ -2,8 +2,6 @@
 .projects-section {
   padding: 1rem 5%;
   background: #fff;
-  /* REQUISITO: Ocupar todo el espacio disponible */
-  min-height: calc(100vh - var(--nav-height));
   display: flex;
   flex-direction: column;
   justify-content: start; /* REMOVE CENTER: Para quitar espacio superior */
