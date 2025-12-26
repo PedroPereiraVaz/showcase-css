@@ -238,7 +238,6 @@
     margin-top: 0.2rem;
   }
 
-  /* Ajustes Chaos (Aplanar offsets) */
   .project-card:nth-child(2) {
     margin-top: 10px;
     margin-left: 5px;
@@ -248,5 +247,4 @@
     margin-left: 0;
     min-width: 180px;
   }
-  /* Card 4 sube más para cerrar hueco */
 }
