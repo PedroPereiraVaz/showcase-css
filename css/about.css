@@ -284,10 +284,10 @@ section {
 
   /* 1. Reducir animación/visual con scale */
   .inspector-panel {
-    transform: scale(0.65); /* Reducir al 75% */
+    transform: scale(0.55); /* Reducir al 75% */
     transform-origin: center center;
     margin-bottom: -40px; /* Compensar espacio vacío visual por el scale */
-    margin-top: -60px;
+    margin-top: -100px;
     width: 100%;
     border-width: 2px; /* Bordes más finos */
     box-shadow: 6px 6px 0 0 var(--border-color); /* Sombra ajustada */
@@ -295,17 +295,17 @@ section {
 
   .inspector-panel:hover {
     /* Reset hover transform para que no "salte" */
-    transform: scale(0.65) rotate(1deg);
+    transform: scale(0.55) rotate(1deg);
   }
 
   .about-text {
     text-align: center; /* Centrar texto */
-    padding: 0 1rem;
+    padding: 0rem;
   }
 
   .about-text h3 {
     font-size: 1.6rem; /* Reducir título drásticamente (antes 3rem) */
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.2rem;
   }
 
   .about-text p {

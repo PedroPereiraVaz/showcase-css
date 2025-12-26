@@ -253,7 +253,7 @@
 @media (max-width: 1000px) {
   .hero-section {
     min-height: calc(
-      100dvh - 130px
+      100svh - 130px
     ); /* Ajuste estático para header de 2 filas y barra móvil */
     padding-bottom: 0;
   }
