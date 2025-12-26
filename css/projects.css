@@ -200,29 +200,12 @@
 @media (max-width: 1000px) {
   /* 1. Cabecera en una línea (aprox) */
   .section-header h2 {
-    font-size: 1.5rem; /* Reducir titulo */
-    margin-bottom: 0;
-  }
-  .section-header p {
-    font-size: 0.7rem;
-    max-width: 95%;
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 2rem; /* Reducir titulo */
   }
 
   /* 2. Grid Miniatura */
   .projects-section {
     padding: 1rem 2%; /* Aprovechar ancho completo */
-  }
-
-  /* Escalar visualmente el grid es lo más eficiente para mantener proporciones 'chaos' */
-  .projects-grid {
-    transform: scale(0.9); /* Reducir un poco el todo */
-    transform-origin: top center;
-    width: 100%;
-    margin-bottom: -100px; /* Compensar espacio vacío por scale */
   }
 
   /* Reducir alturas y offsets a la mitad aprox */
@@ -239,15 +222,14 @@
   }
 
   .card-content h3 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin: 0;
   }
   .card-content p {
     font-size: 0.7rem;
     line-height: 1.1;
-    -webkit-line-clamp: 2;
-    margin: 0;
   }
+
   .tags {
     display: none;
   } /* Ocultar tags en mini para ahorrar espacio/CSS */
@@ -260,16 +242,11 @@
   .project-card:nth-child(2) {
     margin-top: 10px;
     margin-left: 5px;
-    min-height: 100px;
   }
   .project-card:nth-child(3) {
-    margin-top: -30px;
+    margin-top: -20px;
     margin-left: 0;
-    min-height: 90px;
+    min-width: 180px;
   }
   /* Card 4 sube más para cerrar hueco */
-  .project-card:nth-child(4) {
-    margin-top: -20px;
-    min-height: 80px;
-  }
 }
