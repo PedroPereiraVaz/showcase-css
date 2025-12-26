@@ -7,7 +7,6 @@
   align-items: center;
   position: relative;
   overflow: hidden; /* Contener decoraciones */
-
   /* Patrón de fondo sutil */
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.05) 1px,

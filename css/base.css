@@ -25,19 +25,24 @@
   --nav-height-mobile: 130px; /* Altura estimada header móvil (2 filas) */
 }
 
-/* UTILIDAD: Sección Ocupar Pantalla Completa (menos Header) */
-.full-screen {
-  /* Desktop default */
-  min-height: calc(100vh - var(--nav-height));
-  scroll-margin-top: var(--nav-height);
+/* ESTRUCTURA GLOBAL DE SECCIONES */
+section {
+  position: relative;
+  width: 100%;
 
-  /* Modern logical viewport (fix mobile jump) */
+  /* 1. Altura Base Desktop */
+  min-height: calc(100vh - var(--nav-height));
+
+  /* 2. Scroll Offset para que el header no tape el titulos */
+  scroll-margin-top: var(--nav-height); /* Desktop */
+
+  /* 3. Modern Mobile Viewport (Estabilidad al recargar) */
   min-height: calc(100svh - var(--nav-height));
 }
 
 @media (max-width: 1000px) {
-  .full-screen {
-    /* Ajuste para móvil usando svh y la altura del header móvil */
+  section {
+    /* Ajuste Movil: Altura header diferente */
     min-height: calc(100svh - var(--nav-height-mobile));
     scroll-margin-top: var(--nav-height-mobile);
   }
