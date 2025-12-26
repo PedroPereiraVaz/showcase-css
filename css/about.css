@@ -259,14 +259,14 @@
 }
 
 /* SCROLL FIX */
-section {
+/*section {
   scroll-margin-top: var(--nav-height);
 }
 
 #about {
   scroll-margin-top: var(--nav-height);
 }
-
+*/
 /* RESPONSIVE ABOUT */
 @media (max-width: 1000px) {
   .about-grid {
