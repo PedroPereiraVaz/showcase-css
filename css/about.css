@@ -258,50 +258,28 @@
   color: var(--accent-orange);
 }
 
-/* SCROLL FIX */
-/*section {
-  scroll-margin-top: var(--nav-height);
-}
-
-#about {
-  scroll-margin-top: var(--nav-height);
-}
-*/
 /* RESPONSIVE ABOUT */
 @media (max-width: 1000px) {
   .about-grid {
     flex-direction: column; /* Apilar verticalmente */
-    gap: 1rem; /* Menos espacio entre visual y texto */
+    gap: 0rem; /* Menos espacio entre visual y texto */
   }
-
-  /* 1. Reducir animación/visual con scale */
-  .inspector-panel {
-    transform: scale(0.55); /* Reducir al 75% */
-    transform-origin: center center;
-    margin-bottom: -40px; /* Compensar espacio vacío visual por el scale */
-    margin-top: -100px;
-    width: 100%;
-    border-width: 2px; /* Bordes más finos */
-    box-shadow: 6px 6px 0 0 var(--border-color); /* Sombra ajustada */
-  }
-
-  .inspector-panel:hover {
-    /* Reset hover transform para que no "salte" */
-    transform: scale(0.55) rotate(1deg);
+  .about-visual {
+    transform: scale(0.8);
   }
 
   .about-text {
-    text-align: center; /* Centrar texto */
+    text-align: center;
     padding: 0rem;
   }
 
   .about-text h3 {
-    font-size: 1.6rem; /* Reducir título drásticamente (antes 3rem) */
+    font-size: 1.6rem;
     margin-bottom: 0.2rem;
   }
 
   .about-text p {
-    font-size: 0.9rem; /* Texto cuerpo más pequeño */
+    font-size: 0.9rem;
     line-height: 1.2;
   }
 
@@ -312,7 +290,7 @@
   }
 
   .stats-list li strong {
-    font-size: 1.6rem; /* Números más pequeños */
+    font-size: 1.6rem;
   }
 
   .stats-list li span {
