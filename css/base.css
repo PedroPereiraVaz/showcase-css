@@ -29,6 +29,7 @@
 .full-screen {
   /* Desktop default */
   min-height: calc(100vh - var(--nav-height));
+  scroll-margin-top: var(--nav-height);
 
   /* Modern logical viewport (fix mobile jump) */
   min-height: calc(100svh - var(--nav-height));
