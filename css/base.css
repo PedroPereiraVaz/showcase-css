@@ -39,6 +39,7 @@
   .full-screen {
     /* Ajuste para móvil usando svh y la altura del header móvil */
     min-height: calc(100svh - var(--nav-height-mobile));
+    scroll-margin-top: var(--nav-height-mobile);
   }
 }
 
