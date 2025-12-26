@@ -260,6 +260,9 @@
 
 /* RESPONSIVE ABOUT */
 @media (max-width: 1000px) {
+  .about-section {
+    padding: 0;
+  }
   .about-grid {
     flex-direction: column; /* Apilar verticalmente */
     gap: 0rem; /* Menos espacio entre visual y texto */
