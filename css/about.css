@@ -1,10 +1,11 @@
-/* 7. ABOUT SECTION (CLIP-PATH & FILTER) */
+/* === SECCIÓN SOBRE MÍ === */
+
 .about-section {
   padding: 6rem 5%;
   border-top: var(--border-width) solid var(--border-color);
   background: var(--bg-color);
   display: flex;
-  align-items: center; /* Centrar verticalmente */
+  align-items: center;
   justify-content: center;
 }
 
@@ -19,7 +20,7 @@
   justify-content: center;
 }
 
-/* UI Inspector Panel for About Section */
+/* === COMPONENTE: UI INSPECTOR === */
 .inspector-panel {
   background: #fff;
   border: 3px solid var(--border-color);
@@ -95,7 +96,7 @@
 .mini-avatar {
   width: 50px;
   height: 50px;
-  background-image: url("https://source.unsplash.com/random/100x100/?person");
+  background-image: url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80");
   background-size: cover;
   border: 2px solid var(--border-color);
   border-radius: 50%;
@@ -137,6 +138,7 @@
   border: 1px solid #999;
 }
 
+/* Animación con keyframes */
 .status-dot {
   width: 8px;
   height: 8px;
@@ -173,7 +175,7 @@
   border-radius: 50%;
   position: absolute;
   top: 2px;
-  left: 22px; /* Active state fixed */
+  left: 22px;
   transition: 0.3s;
 }
 
@@ -258,15 +260,17 @@
   color: var(--accent-orange);
 }
 
-/* RESPONSIVE ABOUT */
+/* Responsivo para sección Sobre Mí */
 @media (max-width: 1000px) {
   .about-section {
     padding: 0;
   }
+
   .about-grid {
-    flex-direction: column; /* Apilar verticalmente */
-    gap: 0rem; /* Menos espacio entre visual y texto */
+    flex-direction: column;
+    gap: 0rem;
   }
+
   .about-visual {
     transform: scale(0.8);
     margin-top: -30px;
@@ -296,7 +300,6 @@
   .stats-list li strong {
     font-size: 1.6rem;
   }
-
   .stats-list li span {
     font-size: 0.8rem;
   }
