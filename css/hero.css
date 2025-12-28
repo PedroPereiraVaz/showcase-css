@@ -1,4 +1,5 @@
-/* HERO SECTION */
+/* === SECCIÓN HERO (Presentación) === */
+
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -22,7 +23,7 @@
   height: auto;
 }
 
-/* Bloque: Descripcion */
+/* === CONTENIDO TEXTUAL === */
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -57,6 +58,10 @@
   -webkit-text-stroke: 2px var(--border-color);
 }
 
+.highlight-pink {
+  background: linear-gradient(transparent 60%, var(--accent-pink) 60%);
+}
+
 .hero-desc {
   font-size: 1.25rem;
   max-width: 100%;
@@ -64,10 +69,7 @@
   color: #444;
 }
 
-.highlight-pink {
-  background: linear-gradient(transparent 60%, var(--accent-pink) 60%);
-}
-
+/* Estilos de botones */
 .hero-actions {
   display: flex;
   gap: 1.5rem;
@@ -99,7 +101,7 @@
   text-decoration-thickness: 2px;
 }
 
-/* Bloque: Ventana de codigo */
+/* === ELEMENTO VISUAL: CODE WINDOW === */
 .hero-visual {
   position: relative;
   height: 500px;
@@ -111,6 +113,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* Uso de background-image (Radial Gradient) */
   background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
   background-size: 20px 20px;
 }
@@ -118,7 +122,7 @@
 .code-window {
   width: 100%;
   max-width: 350px;
-  background: #1a1a1a; /* Fondo oscuro terminal */
+  background: #1a1a1a;
   border: 3px solid var(--border-color);
   box-shadow: 12px 12px 0 0 var(--accent-pink);
   border-radius: var(--radius-small);
@@ -182,12 +186,10 @@
 .line {
   display: block;
 }
-
 .indent {
   padding-left: 2rem;
 }
 
-/* Syntax Highlighting */
 .keyword {
   color: var(--accent-pink);
   font-weight: bold;
@@ -199,7 +201,7 @@
   color: var(--accent-yellow);
 }
 
-/* Animación de Cursor parpadeante */
+/* Animación con @keyframes: Cursor parpadeante */
 .line:last-child::after {
   content: "_";
   animation: blink 1s infinite;
@@ -216,7 +218,7 @@
   }
 }
 
-/* 5. CINTA DE SKILLS */
+/* === COMPONENTE: CINTA SCROLL === */
 .cinta-tecnologias {
   background: var(--text-primary);
   color: #fff;
@@ -226,6 +228,7 @@
   flex-shrink: 0;
 }
 
+/* Animación de desplazamiento continuo */
 .cinta-carril {
   display: inline-block;
   animation: mover-cinta 60s linear infinite;
@@ -248,7 +251,7 @@
   }
 }
 
-/* RESPONSIVE HERO */
+/* Responsive Hero */
 @media (max-width: 1000px) {
   .hero-section {
     padding-bottom: 0;
@@ -256,40 +259,45 @@
 
   .hero-container {
     width: 90%;
-    flex-direction: column; /* Apilar columna */
+    flex-direction: column;
     gap: 1.5rem;
     padding: 0.5rem 0 0 0;
   }
+
   .display-title {
     margin-bottom: 1rem;
   }
+
   .hero-desc {
     font-size: 0.8rem;
     margin-bottom: 0.8rem;
   }
+
   .hero-visual {
     height: 180px;
   }
 
-  /* Ajustar la ventana interior para que quepa en 250px */
+  /* Ajuste de escala para móvil */
   .code-window {
     transform: scale(0.7) rotate(-3deg);
     max-width: 100%;
-    margin-top: -1rem; /* Subir un poco para compensar el scaling */
+    margin-top: -1rem;
   }
+
   .code-window:hover {
     transform: rotate(0deg) scale(0.8);
   }
 
-  /* Reducir texto interno para móviles */
   .code-content {
     padding: 1rem;
     font-size: 0.85rem;
     line-height: 1.4;
   }
+
   .cinta-tecnologias {
     padding: 0.4rem;
   }
+
   .cinta-carril span {
     font-size: 0.8rem;
   }

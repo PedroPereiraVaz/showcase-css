@@ -1,15 +1,14 @@
-/* 9. FOOTER */
+/* === FOOTER (PIE DE PÁGINA) === */
+
 .main-footer {
   background: white;
   padding: 2rem 5%;
   border-top: var(--border-width) solid var(--border-color);
-  /* REQUISITO: Ocupar todo el espacio disponible (Viewport - Header) */
   min-height: calc(100vh - var(--nav-height));
   display: flex;
   flex-direction: column;
 }
 
-/* Contenedor crece para ocupar el alto */
 .footer-container {
   width: 100%;
   max-width: 1400px;
@@ -17,11 +16,12 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* CTA arriba/centro, Socials abajo */
+  justify-content: space-between;
 }
 
+/* === CTA SECTION === */
 .footer-cta {
-  flex-grow: 1; /* Ocupa el espacio central */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +42,7 @@
 .email-link {
   font-size: clamp(0.5rem, 6vw, 2.5rem);
   font-weight: 900;
-  text-decoration: none; /* Quitamos subrayado por defecto */
+  text-decoration: none;
   color: var(--text-primary);
   background: var(--accent-yellow);
   padding: 1rem 3rem;
@@ -50,7 +50,7 @@
   box-shadow: 8px 8px 0 0 var(--border-color);
   transition: 0.2s;
   display: inline-block;
-  transform: rotate(-2deg); /* Toque "no-code" / dinámico */
+  transform: rotate(-2deg);
 }
 
 .email-link:hover {
@@ -65,7 +65,7 @@
   border-top: 2px solid #eee;
   padding-top: 2rem;
   display: flex;
-  flex-direction: column; /* Apilamos verticalmente */
+  flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   font-weight: 500;

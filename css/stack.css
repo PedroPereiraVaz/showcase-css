@@ -1,4 +1,5 @@
-/* 8. SKILLS / STACK SECTION */
+/* === SECCIÓN STACK / SKILLS === */
+
 .skills-visual-section {
   background: var(--text-primary);
   padding: 6rem 0;
@@ -6,24 +7,26 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden; /* Contener decoraciones */
-  /* Patrón de fondo sutil */
+  overflow: hidden;
+  /* Background image: Patrón de cuadrícula */
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.05) 1px,
       transparent 1px
     ),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
+  /* Posicionamiento del fondo (requerido) */
+  background-position: center;
 }
 
-/* Decoraciones */
+/* === ELEMENTOS DECORATIVOS === */
 .skills-bg-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--font-display);
-  font-size: 25vw; /* Gigante */
+  font-size: 25vw;
   color: transparent;
   -webkit-text-stroke: 4px rgba(255, 255, 255, 0.03);
   font-weight: 900;
@@ -39,6 +42,7 @@
   z-index: 2;
 }
 
+/* Animación infinita rotativa */
 .shape-1 {
   width: 300px;
   height: 300px;
@@ -82,13 +86,13 @@
   }
 }
 
+/* === GRID DE TARJETAS === */
 .stack-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
   width: 100%;
-  /* FORZAR 5 COLUMNAS MÁX: 120px*5 + 24px*4 = 696px. Dejamos 750px de margen */
   max-width: 750px;
   z-index: 10;
 }
@@ -96,14 +100,12 @@
 .stack-card {
   background: #fff;
   border: var(--border-width) solid #fff;
-  /* REQUISITO: Cuadrados perfectos fijos */
   width: 120px;
   height: 120px;
   padding: 0.5rem;
   text-align: center;
   transition: 0.3s;
   box-shadow: 6px 6px 0 0 var(--accent-pink);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,7 +121,7 @@
 }
 
 .stack-icon {
-  font-size: 2.2rem; /* Tamaño reducido para dejar espacio al texto */
+  font-size: 2.2rem;
   margin-bottom: 0.2rem;
   color: var(--text-primary);
   transition: 0.3s;
@@ -134,12 +136,10 @@
   font-family: var(--font-display);
   font-weight: 800;
   text-transform: uppercase;
-  /* REQUISITO: Texto adaptable */
-  font-size: 0.8rem; /* Fuente base pequeña */
+  font-size: 0.8rem;
   color: var(--text-primary);
-
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Cortar si es excesivamente largo, aunque 0.8rem debería caber */
+  text-overflow: ellipsis;
 }

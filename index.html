@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEDRO | App Developer Portfolio</title>
 
-    <!-- Fuentes Google: Syne (Titulares) y Space Grotesk (Texto) -->
+    <!-- Tipografías externas (Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <!-- Iconos obligatorios (Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Header: Navegación -->
+    <!-- === HEADER === -->
     <header class="header-nav">
         <a href="#" class="logo-box">
             DEV.PORTFOLIO
@@ -36,7 +37,7 @@
     </header>
 
     <main>
-        <!-- Hero Section: Introducción Personal -->
+        <!-- === HERO SECTION === -->
         <section id="hero" class="hero-section">
             <div class="hero-container">
                 <div class="hero-content">
@@ -56,7 +57,7 @@
                     </div>
                 </div>
 
-                <!-- Ventana de codigo -->
+                <!-- Elemento Visual: Ventana de Código -->
                 <div class="hero-visual">
                     <div class="code-window">
                         <div class="window-header">
@@ -80,9 +81,8 @@
                     </div>
                 </div>
             </div>
-            </div>
 
-            <!-- Cinta de skills -->
+            <!-- Carrusel de Tecnologías -->
             <div class="cinta-tecnologias">
                 <div class="cinta-carril">
                     <span> PYTHON • JAVASCRIPT • HTML • CSS • GIT • REACT • EXPRESS • ODOO • FASTAPI </span>
@@ -92,17 +92,15 @@
             </div>
         </section>
 
-        <!-- Sección de Proyectos -->
+        <!-- === PROJECTS SECTION === -->
         <section id="projects" class="projects-section">
             <div class="section-header">
                 <h2>PROYECTOS</h2>
                 <p>Una selección de mis últimos experimentos y trabajos.</p>
             </div>
 
-
-            <!-- CHAOS GRID CONTAINER -->
             <div class="projects-grid">
-                <!-- Proyecto 1: AWS SES Tracking -->
+                <!-- Project Card 1: AWS SES -->
                 <article class="project-card">
                     <div class="card-image-box">
                         <div class="overlay"></div>
@@ -113,7 +111,7 @@
                     <div class="card-content">
                         <h3>AWS SES TRACKING</h3>
                         <p>Módulo de Odoo para integración total con Amazon SES. Resuelve el problema de Message-ID y
-                            rastrea rebotes/quejas.</p>
+                            rastrea rebotes.</p>
                         <div class="tags">
                             <span class="tag">ODOO</span>
                             <span class="tag">PYTHON</span>
@@ -124,7 +122,7 @@
                     </div>
                 </article>
 
-                <!-- Proyecto 2: Outlook Notifier -->
+                <!-- Project Card 2: Outlook Notifier -->
                 <article class="project-card">
                     <div class="card-image-box type-2">
                         <div class="overlay"></div>
@@ -135,12 +133,10 @@
                     <div class="card-content">
                         <h3>OUTLOOK NOTIFIER</h3>
                         <p>Monitor proactivo de tokens OAuth2 de Azure. Evita la caída del servicio de correo por
-                            expiración
-                            de secretos.</p>
+                            expiración de secretos.</p>
                         <div class="tags">
                             <span class="tag">ODOO</span>
                             <span class="tag">AZURE</span>
-                            <span class="tag">SECURITY</span>
                             <span class="tag">PYTHON</span>
                         </div>
                         <a href="https://github.com/PedroPereiraVaz/microsoft_outlook_notifier" target="_blank"
@@ -148,7 +144,7 @@
                     </div>
                 </article>
 
-                <!-- Proyecto 3: Dashboard Métricas -->
+                <!-- Project Card 3: Mail Dashboard -->
                 <article class="project-card">
                     <div class="card-image-box type-3">
                         <div class="overlay"></div>
@@ -159,20 +155,18 @@
                     <div class="card-content">
                         <h3>MAIL DASHBOARD</h3>
                         <p>Panel avanzado de analítica para Email Marketing. Conversiones, ingresos potenciales y
-                            filtrado
-                            inteligente.</p>
+                            filtrado inteligente.</p>
                         <div class="tags">
                             <span class="tag">ODOO</span>
                             <span class="tag">JS</span>
                             <span class="tag">STATISTICS</span>
-                            <span class="tag">UX</span>
                         </div>
                         <a href="https://github.com/PedroPereiraVaz/dashboard_metricas_mail" target="_blank"
                             class="card-link">VER CÓDIGO <i class="fa-brands fa-github"></i></a>
                     </div>
                 </article>
 
-                <!-- Proyecto 4: Master Data Analytics -->
+                <!-- Project Card 4: Data Analytics -->
                 <article class="project-card">
                     <div class="card-image-box">
                         <div class="overlay"></div>
@@ -182,8 +176,7 @@
                     </div>
                     <div class="card-content">
                         <h3>DATA ANALYTICS</h3>
-                        <p>Análisis profundo del desempleo en España (2021-2024). Limpieza, EDA y modelado de datos
-                            oficiales.</p>
+                        <p>Análisis profundo del desempleo en España. Limpieza, EDA y modelado de datos oficiales.</p>
                         <div class="tags">
                             <span class="tag">PYTHON</span>
                             <span class="tag">PANDAS</span>
@@ -193,14 +186,14 @@
                             class="card-link">VER CÓDIGO <i class="fa-brands fa-github"></i></a>
                     </div>
                 </article>
-            </div> <!-- /projects-grid -->
+            </div>
         </section>
 
-        <!-- Sección Sobre Mí (Clip-path & Filter) -->
+        <!-- === ABOUT SECTION === -->
         <section id="about" class="about-section">
             <div class="about-grid">
                 <div class="about-visual">
-                    <!-- UI Inspector Panel Concept -->
+                    <!-- UI Inspector Panel -->
                     <div class="inspector-panel">
                         <div class="inspector-header">
                             <span class="inspector-title">PROPERTIES</span>
@@ -219,9 +212,7 @@
                                     <span class="element-id">#PEDRO_DEV</span>
                                 </div>
                             </div>
-
                             <hr class="insp-divider">
-
                             <!-- Status Row -->
                             <div class="insp-row">
                                 <label>Status</label>
@@ -230,18 +221,15 @@
                                     ONLINE
                                 </div>
                             </div>
-
-                            <!-- Sliders / Toggles -->
+                            <!-- Sliders -->
                             <div class="insp-group">
                                 <label class="group-label">ATTRIBUTES</label>
-
                                 <div class="insp-row control-row">
                                     <label>Creativity</label>
                                     <div class="toggle-switch active">
                                         <div class="toggle-knob"></div>
                                     </div>
                                 </div>
-
                                 <div class="insp-row control-row">
                                     <label>Coffee lvl</label>
                                     <div class="insp-slider">
@@ -250,7 +238,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Tags -->
                             <div class="insp-group">
                                 <label class="group-label">TAGS</label>
@@ -263,6 +250,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="about-text">
                     <h2>SOBRE MÍ</h2>
                     <h3>MÁS QUE CÓDIGO</h3>
@@ -272,27 +260,16 @@
                         Cuando no programo, estoy aprendiendo nuevas tecnologías y explorando arquitecturas en la nube.
                     </p>
                     <ul class="stats-list">
-                        <li>
-                            <strong>4+</strong>
-                            <span>Años Exp.</span>
-                        </li>
-                        <li>
-                            <strong>15+</strong>
-                            <span>Proyectos</span>
-                        </li>
-                        <li>
-                            <strong>100%</strong>
-                            <span>Café</span>
-                        </li>
+                        <li><strong>4+</strong><span>Años Exp.</span></li>
+                        <li><strong>15+</strong><span>Proyectos</span></li>
+                        <li><strong>100%</strong><span>Café</span></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Animación / Skills (Keyframes) -->
+        <!-- === STACK SECTION === -->
         <section id="skills" class="skills-visual-section">
-            <!-- Animación Geométrica Compleja -->
-            <!-- Elementos Decorativos de Fondo -->
             <div class="skills-bg-text">STACK</div>
             <div class="skills-deco-shape shape-1"></div>
             <div class="skills-deco-shape shape-2"></div>
@@ -339,7 +316,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- === FOOTER === -->
     <footer id="contact" class="main-footer">
         <div class="footer-container">
             <div class="footer-cta">
@@ -350,7 +327,6 @@
                 <div class="socials">
                     <a href="#">GITHUB</a>
                     <a href="#">LINKEDIN</a>
-
                 </div>
                 <p>&copy; 2026 PEDRO. CREADO CON CSS PURO.</p>
             </div>
