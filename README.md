@@ -42,7 +42,7 @@
 
 ### 4. IMÁGENES Y EFECTOS VISUALES
 
-- **`mix-blend-mode` (OBLIGATORIO)**:
+- **`mix-blend-mode`**:
   - `.overlay` -> Efecto de mezcla "multiply" en imágenes de tarjetas (`css/projects.css`)
 - **`background-image`**:
   - `.hero-visual` -> Gradiente radial (`css/hero.css`)
@@ -58,7 +58,7 @@
 
 - **Google Fonts**:
   - `Syne` (Títulos) y `Space Grotesk` (Cuerpo) importadas en `<head>` (`index.html`)
-- **Font Awesome (OBLIGATORIO)**:
+- **Font Awesome**:
   - Iconos `<i>` en botones (`.hero-btn`) y tarjetas de stack (`.stack-icon`) (`index.html`)
 
 ### 6. DISEÑO RESPONSIVE
