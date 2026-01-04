@@ -67,7 +67,7 @@
 /* Card 3 */
 .project-card:nth-child(3) {
   grid-column: 1 / span 4;
-  margin-top: -60px; /* Margen negativo */
+  margin-top: -60px;
   margin-left: 0px;
   transform: rotate(-1deg);
   min-height: 130px;
